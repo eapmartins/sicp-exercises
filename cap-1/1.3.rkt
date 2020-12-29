@@ -2,11 +2,11 @@
 
 (define (square number) (* number number))
 
-(define (squareSum x y) (+ (square x) (square y)))
+(define (square-sum x y) (+ (square x) (square y)))
 
-(define (sumOfLargestTwoSquared x y z)
-  (cond ((and (>= x z) (>= y z)) (squareSum x y))
-        ((and (>= x y) (>= z y)) (squareSum x z))
-        (else (squareSum y z))
+(define (sum-of-largest-two-squared x y z)
+  (cond ((and (>= x z) (>= y z)) (square-sum x y))
+        ((and (>= x y) (>= z y)) (square-sum x z))
+        (else (square-sum y z))
    )
 )
